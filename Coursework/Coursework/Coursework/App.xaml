@@ -1,0 +1,82 @@
+﻿<Application x:Class="Coursework.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Coursework"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="PrimaryColour">#343434</SolidColorBrush>
+        <SolidColorBrush x:Key="SecondaryColour">#1A1A1A</SolidColorBrush>
+        <SolidColorBrush x:Key="TertiaryColour">#FFFFFF</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryDarkerColour">#000000</SolidColorBrush>
+        <SolidColorBrush x:Key="PrimaryLighterColour">#646464</SolidColorBrush>
+
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="PasswordChar" Value="*"/>
+            <Setter Property="MaxLength" Value="20"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{StaticResource TertiaryColour}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TertiaryColour}"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="/Fonts/Roboto-Thin.ttf #Roboto Thin"/>
+        </Style>
+
+        <Style x:Key="PrimaryButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="{StaticResource SecondaryColour}"/>
+        </Style>
+
+        <Style x:Key="SecondaryButton" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="{StaticResource TertiaryColour}"/>
+            <Setter Property="Background" Value="{StaticResource PrimaryDarkerColour}"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="{StaticResource TertiaryColour}"/>
+        </Style>
+
+        <Style x:Key="HeadingLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="{StaticResource TertiaryColour}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="DockPanel">
+            <Setter Property="Background" Value="{StaticResource PrimaryColour}"/>
+        </Style>
+    </Application.Resources>
+</Application>

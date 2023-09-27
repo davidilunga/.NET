@@ -1,0 +1,65 @@
+﻿<Page x:Class="Coursework.Pages.CreateAccount"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Coursework.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="675" d:DesignWidth="1200"
+      Title="CreateAccount">
+
+    <DockPanel Background="{StaticResource PrimaryColour}">
+        <StackPanel DockPanel.Dock="Top" Background="{StaticResource PrimaryDarkerColour}">
+            <Label Style="{StaticResource HeadingLabel}">Create A New Account</Label>
+        </StackPanel>
+        <Grid DockPanel.Dock="Top" Margin="10">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="10,0,10,0">
+                <StackPanel Orientation="Vertical" Grid.Row ="0" Grid.Column="0" >
+                    <Label>First Name:</Label>
+                    <TextBox Name="FirstName"></TextBox>
+                    <Label>Email:</Label>
+                    <TextBox Name="Email"></TextBox>
+                    <Label>Sort Code:</Label>
+                    <TextBox Name="SortCode" KeyDown="SortCode_KeyDown" MaxLength="8"></TextBox>
+                    <Label>Account Number:</Label>
+                    <TextBox Name="AccountNumber" MaxLength="8"></TextBox>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="10,0,10,0">
+                <StackPanel Orientation="Vertical" Grid.Row ="0" Grid.Column="0">
+                    <Label>Last Name:</Label>
+                    <TextBox Name="LastName"></TextBox>
+                    <Label>Password:</Label>
+                    <PasswordBox Name="Password"></PasswordBox>
+                    <Label>Date Of Birth (DD-MM-YYYY):</Label>
+                    <TextBox Name="DOB" KeyDown="DOB_KeyDown" MaxLength="10"></TextBox>
+                    <Label>Name On The Card:</Label>
+                    <TextBox Name="NameOnCard"></TextBox>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <StackPanel DockPanel.Dock="Top" Margin="15,20,0,0">
+            <Label Name="ResultLabel" Foreground="White" FontWeight="Bold" Visibility="Hidden">Form submitted successful</Label>
+        </StackPanel>
+
+        <Grid DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Button Style="{StaticResource SecondaryButton}" Click="Button_GoBack_Click">Go Back</Button>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Button Style="{StaticResource PrimaryButton}" Click="Button_Submit_Click">Submit</Button>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Page>

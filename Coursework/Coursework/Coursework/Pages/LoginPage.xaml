@@ -1,0 +1,57 @@
+﻿<Page x:Class="Coursework.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Coursework.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="675" d:DesignWidth="1200"
+      Title="Login Page">
+
+    <DockPanel Background="{StaticResource PrimaryColour}">
+
+        <StackPanel DockPanel.Dock="Top" Background="{StaticResource PrimaryDarkerColour}">
+            <Label Style="{StaticResource HeadingLabel}">Login Page</Label>
+        </StackPanel>
+        
+        <Grid DockPanel.Dock="Bottom" VerticalAlignment="Bottom">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1">
+                <Button Width="100" Height="40" Background="White" HorizontalAlignment="Right" Click="CloseButton_Click">
+                    <Label Foreground="Red">Close</Label>
+                </Button>
+            </StackPanel>
+
+        </Grid>
+        
+        <StackPanel DockPanel.Dock="Bottom" Margin="250,40" Width="400">
+            <Button Style="{StaticResource PrimaryButton}" Name="SignInButton" Click="Button_SignIn_Click">Sign In</Button>
+            <Button Style="{StaticResource PrimaryButton}" Name="CreatAccountButton" Click="Button_CreateAccount_Click">Create An Account</Button>
+            <Button Style="{StaticResource PrimaryButton}" Name="ForgotPasswordButton" Click="Button_ForgotPassword_Click">Forgot Password</Button>
+        </StackPanel>
+
+        <Grid DockPanel.Dock="Top" VerticalAlignment="Top" Margin="50, 50, 50, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" Grid.Column="0" VerticalAlignment="Center">
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Email:</Label>
+                <Label Height="60"></Label>
+                <Label VerticalContentAlignment="Center" HorizontalContentAlignment="Center">Password:</Label>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Column="1" VerticalAlignment="Center">
+                <TextBox Name="UserEmail"></TextBox>
+                <Label Height="60"></Label>
+                <PasswordBox Name="UserPassword"></PasswordBox>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+</Page>
